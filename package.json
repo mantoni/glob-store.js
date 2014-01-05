@@ -1,0 +1,35 @@
+{
+  "name"             : "glob-store",
+  "version"          : "0.1.0",
+  "description"      : "Key-value store with iterator and glob semantics",
+  "keywords"         : ["store", "glob", "key-value"],
+  "author"           : "Maximilian Antoni (http://maxantoni.de)",
+  "homepage"         : "https://github.com/mantoni/glob-store.js",
+  "main"             : "./lib/store.js",
+  "engines"          : {
+    "node"           : ">=0.8"
+  },
+  "scripts"          : {
+    "start"          : "mocha --watch",
+    "test"           : "make test"
+  },
+  "repository"       : {
+    "type"           : "git",
+    "url"            : "https://github.com/mantoni/glob-store.js.git"
+  },
+  "dependencies"     : {
+    "glob-tree"      : "~0.2.0",
+    "min-iterator"   : "~0.1.0",
+    "live-list"      : "~0.3.0",
+    "inherits"       : "~2.0.1"
+  },
+  "devDependencies"  : {
+    "mocha"          : ">=1.14 <2",
+    "jslint"         : "~0.2.5",
+    "consolify"      : "~0.6.0",
+    "phantomic"      : "~0.2.1",
+    "browser-reload" : ">=1.0 <2"
+  },
+  "files"            : ["lib", "README.md", "CHANGES.md", "LICENSE"],
+  "license"          : "MIT"
+}
