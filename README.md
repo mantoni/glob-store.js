@@ -1,4 +1,4 @@
-# glob-store.js [![Build Status](https://secure.travis-ci.org/mantoni/glob-store.js.png?branch=master)](http://travis-ci.org/mantoni/glob-store.js)
+# glob-store.js [![Build Status](https://travis-ci.org/mantoni/glob-store.js.png?branch=master)](http://travis-ci.org/mantoni/glob-store.js)
 
 Key-value store with iterator and glob semantics. Allows to store multiple
 values per key and can be modified during iteration.
@@ -40,6 +40,7 @@ while ((c = i.next()) !== undefined) {
 - `remove(name, value)`
 - `removeAll(name)`: name is optional
 - `iterator(match)`: match is optional
+- `values()`
 
 ## Iterator API
 
