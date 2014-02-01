@@ -5,7 +5,7 @@
  *
  * @license MIT
  */
-/*globals describe, it, before, after, beforeEach, afterEach*/
+/*globals describe, it*/
 'use strict';
 
 var assert = require('assert');
@@ -14,12 +14,12 @@ var Store    = require('../lib/store').Store;
 var Iterator = require('../lib/iterator').Iterator;
 
 
-describe('store.iterator', function () {
+describe('store.iteratorMatching', function () {
 
   it('returns a new iterator', function () {
     var s = new Store();
 
-    assert(s.iterator() instanceof Iterator);
+    assert(s.iteratorMatching() instanceof Iterator);
   });
 
   it('returns an iterator matching the given expression', function () {
@@ -30,9 +30,9 @@ describe('store.iterator', function () {
     s.add('**', 4);
     s.add('a.*', 5);
 
-    var i = s.iterator('a.*');
+    var i = s.iteratorMatching('a.*');
 
-    assert.deepEqual(i.toArray(), [1, 2, 5]);
+    assert.deepEqual(i.toArray(), [4, 5, 1, 2]);
   });
 
 });
