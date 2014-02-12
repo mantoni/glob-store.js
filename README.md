@@ -43,10 +43,14 @@ stored under the same key.
 - `add(name, value)`
 - `remove(name, value)`
 - `removeAll([name])`
-- `iterator(name[, opts])`
+- `iterator(name[, options])`
 - `values([name])`
 
-The iterator is derived from [min-iterator][].
+The iterator is derived from [min-iterator][] and supports the same `options`
+as the [glob-tree][] iterator:
+
+- `matchers`: whether to include matchers, defaults to `true`
+- `onlyMatchers`: whether to only include matchers, defaults to `false`
 
 ## License
 
