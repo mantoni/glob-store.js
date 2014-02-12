@@ -44,7 +44,7 @@ describe('store.iterator', function () {
 
     var i = s.iterator('a.*', { matchers : false });
 
-    assert.deepEqual(i.toArray(), [1, 2, 5]);
+    assert.deepEqual(i.toArray(), [1, 2]);
   });
 
   it('allows to include only matchers', function () {
