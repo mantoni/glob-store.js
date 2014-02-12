@@ -46,4 +46,26 @@ describe('store.values', function () {
     assert.deepEqual(a, [0, 1, 2, 3]);
   });
 
+  it('returns matching items', function () {
+    var s = new Store();
+    s.add('a.b', 1);
+    s.add('a.c', 2);
+
+    var a = s.values('a.*');
+
+    assert.deepEqual(a, [1, 2]);
+  });
+
+  it('returns matchers', function () {
+    var s = new Store();
+    s.add('**', 0);
+    s.add('a.*', 1);
+    s.add('a.b', 2);
+    s.add('b.c', 3);
+
+    var a = s.values('a.b');
+
+    assert.deepEqual(a, [0, 1, 2]);
+  });
+
 });

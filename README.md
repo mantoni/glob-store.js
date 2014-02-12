@@ -35,13 +35,16 @@ while ((c = i.next()) !== undefined) {
 }
 ```
 
+The implementation is based on [glob-tree][], but allows multiple values to be
+stored under the same key.
+
 ## Store API
 
 - `add(name, value)`
 - `remove(name, value)`
 - `removeAll([name])`
 - `iterator(name[, opts])`
-- `values()`
+- `values([name])`
 
 The iterator is derived from [min-iterator][].
 
@@ -50,3 +53,4 @@ The iterator is derived from [min-iterator][].
 MIT
 
 [min-iterator]: https://github.com/mantoni/min-iterator.js
+[glob-tree]: https://github.com/mantoni/glob-tree.js
