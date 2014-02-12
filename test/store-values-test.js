@@ -36,13 +36,14 @@ describe('store.values', function () {
 
   it('returns all items from all nodes if name is not given', function () {
     var s = new Store();
+    s.add('*', 0);
     s.add('a', 1);
     s.add('a', 2);
     s.add('a.b', 3);
 
     var a = s.values();
 
-    assert.deepEqual(a, [1, 2, 3]);
+    assert.deepEqual(a, [0, 1, 2, 3]);
   });
 
 });

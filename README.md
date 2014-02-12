@@ -24,6 +24,7 @@ To use this module in a browser, download the npm package and then use
 var Store = require('glob-store').Store;
 
 var s = new Store();
+s.add('**', 1);
 s.add('a.b', 2);
 s.add('a.c', 3);
 s.add('a.c', 7);
@@ -38,21 +39,14 @@ while ((c = i.next()) !== undefined) {
 
 - `add(name, value)`
 - `remove(name, value)`
-- `removeAll(name)`: name is optional
-- `iterator(match)`: match is optional
+- `removeAll([name])`
+- `iterator(name[, opts])`
 - `values()`
 
-## Iterator API
-
 The iterator is derived from [min-iterator][].
-
-- `Iterator(node, match)`: Returns a new Iterator using the given root node and
-  optional match expression
-- `next()`: Returns the next node in the tree. If there are no items left,
-  `undefined` is returned.
-
-[min-iterator]: https://github.com/mantoni/min-iterator.js
 
 ## License
 
 MIT
+
+[min-iterator]: https://github.com/mantoni/min-iterator.js
