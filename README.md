@@ -31,7 +31,7 @@ s.add('a.c', 7);
 
 var c, i = s.iterator('a.*');
 while ((c = i.next()) !== undefined) {
-  console.log(c);
+  console.log(i.name + ': ' + c);
 }
 ```
 
