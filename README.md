@@ -1,11 +1,11 @@
-# glob-store.js [![Build Status](https://travis-ci.org/mantoni/glob-store.js.png?branch=master)](http://travis-ci.org/mantoni/glob-store.js)
+# glob-store.js
+
+[![Build Status]](https://travis-ci.org/mantoni/glob-store.js)
+[![SemVer]](http://semver.org)
+[![License]](https://github.com/mantoni/glob-store.js/blob/master/LICENSE)
 
 Key-value store with iterator and glob semantics. Allows to store multiple
 values per key and can be modified during iteration.
-
-Repository: <https://github.com/mantoni/glob-store.js>
-
----
 
 ## Install with npm
 
@@ -56,5 +56,8 @@ as the [glob-tree][] iterator:
 
 MIT
 
+[Build Status]: http://img.shields.io/travis/mantoni/glob-store.js.svg
+[SemVer]: http://img.shields.io/:semver-%E2%9C%93-brightgreen.svg
+[License]: http://img.shields.io/npm/l/glob-store.svg
 [min-iterator]: https://github.com/mantoni/min-iterator.js
 [glob-tree]: https://github.com/mantoni/glob-tree.js
