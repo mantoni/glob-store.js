@@ -43,4 +43,14 @@ describe('store.add', function () {
     assert.deepEqual(s.iterator().toArray(), [1, 2, 3]);
   });
 
+  it('adds multiple values for same key in reverse order', function () {
+    var s = new Store({ reverse : true });
+
+    s.add('x', 1);
+    s.add('x', 2);
+    s.add('x', 3);
+
+    assert.deepEqual(s.iterator().toArray(), [3, 2, 1]);
+  });
+
 });
