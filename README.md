@@ -38,6 +38,12 @@ while ((c = i.next()) !== undefined) {
 The implementation is based on [glob-tree][], but allows multiple values to be
 stored under the same key.
 
+## API
+
+- `Store([opts])`: Constructor function, accepting these options:
+    - `reverse`: Whether to store the values in reverse insertion order.
+      Defaults to `false`.
+
 ## Store API
 
 - `add(name, value)`
